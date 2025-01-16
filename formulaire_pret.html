@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Demande de Prêt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00509e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire de Demande de Prêt</h1>
+        <form>
+            <label for="fullName">Nom complet :</label>
+            <input type="text" id="fullName" placeholder="Votre nom complet" required>
+
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" placeholder="Votre adresse e-mail" required>
+
+            <label for="loanAmount">Montant du prêt (€) :</label>
+            <input type="number" id="loanAmount" placeholder="Exemple : 10000" required>
+
+            <label for="loanPurpose">Objet du prêt :</label>
+            <select id="loanPurpose" required>
+                <option value="">-- Sélectionnez un objet --</option>
+                <option value="immobilier">Immobilier</option>
+                <option value="auto">Achat de véhicule</option>
+                <option value="travaux">Rénovations</option>
+                <option value="personnel">Dépenses personnelles</option>
+            </select>
+
+            <label for="additionalInfo">Informations supplémentaires :</label>
+            <textarea id="additionalInfo" rows="4" placeholder="Expliquez brièvement votre demande"></textarea>
+
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+</body>
+</html>
